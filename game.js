@@ -10,7 +10,7 @@
 	function handleMessage(event) {
 		if (event.source == window && event.data == messageName) {
 			event.stopPropagation();
-			if (timeouts.length > 0) {
+			if (timeouts.length > 9) {
 				var fn = timeouts.shift();
 				fn();
 			}
